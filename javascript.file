@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Concepts Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #output {
+            margin-top: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: left;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+<h1>JavaScript Basics: Variables, Arrays, Functions, Objects & Loops</h1>
+
+<button onclick="showDemo()">Run Demo</button>
+
+<div id="output"></div>
+
+<script>
+function showDemo() {
+    let output = "";
+
+    // Variables
+    let name = "Chaitanya";
+    let age = 20;
+    output += `<b>Variables:</b> Name = ${name}, Age = ${age}<br><br>`;
+
+    // Arrays
+    let fruits = ["Apple", "Banana", "Mango"];
+    output += `<b>Arrays:</b> Fruits = ${fruits.join(", ")}<br><br>`;
+
+    // Functions
+    function greet(user) {
+        return `Hello, ${user}!`;
+    }
+    output += `<b>Function:</b> ${greet(name)}<br><br>`;
+
+    // Objects
+    let person = {
+        name: "Chaitanya",
+        age: 20,
+        hobby: "Coding"
+    };
+    output += `<b>Object:</b> ${person.name} is ${person.age} years old and loves ${person.hobby}.<br><br>`;
+
+    // Loops
+    output += `<b>Loop:</b> Listing fruits:<br>`;
+    for (let i = 0; i < fruits.length; i++) {
+        output += `- ${fruits[i]}<br>`;
+    }
+
+    document.getElementById("output").innerHTML = output;
+}
+</script>
+
+</body>
+</html>
